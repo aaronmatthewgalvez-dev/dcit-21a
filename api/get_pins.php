@@ -1,12 +1,21 @@
 <?php
-header('Content-Type: application/json');
+session_start();
 
-$file = __DIR__ . '/pins.json';
+// Check if logged in
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    http_response_code(401);
+    echo json_encode(['error' => 'Unauthorized']);
+    exit;
+}
 
-if (!file_exists($file)) {
+// Read pins from JSON file
+$pinsFile = '../data/pins.json';
+
+if (!file_exists($pinsFile)) {
     echo json_encode([]);
     exit;
 }
 
-$content = file_get_contents($file);
-echo $content;
+$pins = json_decode(file_get_contents($pinsFile), true);
+echo json_encode($pins);
+?>

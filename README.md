@@ -100,5 +100,3 @@ This version demonstrates fundamental web development concepts without overwhelm
 - AJAX/Fetch API
 - JSON data format
 - File I/O operations
-
-Good luck with your finals! 🎓

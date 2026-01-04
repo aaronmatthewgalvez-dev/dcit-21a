@@ -73,8 +73,10 @@ $role = $_SESSION['role'];
                     <label>Image:</label>
                     <input type="file" id="input-image" accept="image/*">
                     
-                    <button type="submit" class="btn">Save Pin</button>
-                    <button type="button" onclick="closeModal()" class="btn-cancel">Cancel</button>
+                    <div class="modal-buttons">
+                        <button type="submit" class="btn">Save Pin</button>
+                        <button type="button" onclick="closeModal()" class="btn-cancel">Cancel</button>
+                    </div>
                 </form>
             </div>
             <?php endif; ?>

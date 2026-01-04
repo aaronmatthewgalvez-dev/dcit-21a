@@ -1,7 +1,5 @@
 # CvSU Campus Map - Simple Version
 
-**For First Year, First Semester Students**
-
 This is a simplified version of the campus map project, designed to be appropriate for DCIT 21A (Introduction to Computing) finals.
 
 ## Features
